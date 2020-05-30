@@ -1,0 +1,151 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example {
+    background: red;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  /*nav{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content:center;
+  }*/
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example {
+    background: orange;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+  }
+}
+.div-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h2 {
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  font-size: 1.8rem;
+  padding: 2%;
+}
+nav .menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+nav .menu a {
+  text-decoration: none;
+  padding: 3%;
+}
+nav a {
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 40px;
+}
+
+#slogan {
+  background-image: url("https://fakeimg.pl/250x100/");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.social {
+  position: fixed;
+  left: 0;
+  top: 400px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+}
+
+#ultimo-material {
+  margin-top: 5%;
+}
+
+#colaboraciones {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#colaboraciones .visualizador {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+#colaboraciones .visualizador #visualizador-video {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+#colaboraciones .visualizador #visualizador-colleccion {
+  width: 30%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+}
+#colaboraciones .visualizador #visualizador-colleccion div {
+  height: 50px;
+  padding: 5%;
+}
+
+.video-responsive {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+  width: 100%;
+}
+
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

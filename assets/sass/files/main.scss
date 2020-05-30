@@ -1,0 +1,144 @@
+@import "variables";
+@import "media-querys";
+
+
+@mixin prueba-caja($color){
+    border-style: solid;
+    border-color:$color;
+    border-width: 5px;
+}
+// @include prueba-caja(blue);
+
+.div-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+*{
+    margin: 0; 
+    padding: 0;  
+}
+   
+body{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    text-align: center;
+}
+
+
+@mixin padding-interno($interno){
+    padding-top: $interno;
+    padding-bottom: $interno;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+    padding: 2%;
+
+
+    .menu{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        a{
+            text-decoration: none;
+            padding: 3%;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+
+    
+    
+}
+.logo-icon{
+    width: 40px;
+}
+
+#slogan{
+    background-image: url("https://fakeimg.pl/250x100/");
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vh;
+}
+
+.social{
+    position: fixed;
+    left: 0;
+    top: 400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+#ultimo-material{
+    margin-top: $margin-top-div;
+}
+
+#colaboraciones{
+    margin-top: $margin-top-div;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    .visualizador{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        @include padding-interno($padding-botton-top);
+    
+        #visualizador-video{
+            width: 60%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+        }
+        #visualizador-colleccion{
+            width: 30%;
+            overflow:scroll;
+            display: flex;
+            flex-direction: column;
+            height: 70vh;
+        
+            div{
+                height: 50px;
+                padding: 5%;
+            }
+        }
+    }
+}
+
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+    width: 100%;
+}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
