@@ -2,12 +2,18 @@
 @import "media-querys";
 
 
+
 @mixin prueba-caja($color){
     border-style: solid;
     border-color:$color;
     border-width: 5px;
 }
 // @include prueba-caja(blue);
+
+@mixin margen-top-bottom($margen){
+    margin-top: $margen;
+    margin-bottom: $margen;
+}
 
 .div-1{
     display: flex;
@@ -91,6 +97,43 @@ nav {
     margin-top: $margin-top-div;
 }
 
+%visualizador-video-general{
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+}
+
+#visualizador-video-material{
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    @include prueba-caja(blue);
+ }
+
+
+ #material{
+    margin-top: $margin-top-div;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+
+    .visualizador{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        @include padding-interno($padding-botton-top);
+    
+        #visualizador-video{
+           @extend %visualizador-video-general;
+        }
+    }
+
+ }
 #colaboraciones{
     margin-top: $margin-top-div;
     display: flex;
@@ -106,10 +149,7 @@ nav {
         @include padding-interno($padding-botton-top);
     
         #visualizador-video{
-            width: 60%;
-            height: auto;
-            display: flex;
-            justify-content: center;
+           @extend %visualizador-video-general;
         }
         #visualizador-colleccion{
             width: 30%;
@@ -142,3 +182,45 @@ nav {
     top: 0;
     width: 100%;
 }
+
+
+.video-centrado{
+    display: flex;
+}
+
+#frase{
+    @include margen-top-bottom(5%);
+    text-align: center;
+}
+
+footer{
+    background-color: #6A827F;
+}
+
+#footer-info{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+
+    .footer-info-children{
+        width: 30%;
+        height: 30%;
+        margin: 10px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      
+    }
+}
+
+#eventos{
+    text-align: center;
+}
+
+footer > h2{
+    text-align: center;
+}
+
+
+
+

@@ -1,31 +1,14 @@
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .example {
-    background: red;
+/*@media only screen and (max-width: 600px) {
+    .footer-info-children{
+      width: 100%;
+    }
   }
-}
-@media only screen and (max-width: 1000px) {
-  /*nav{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content:center;
-  }*/
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* Medium devices (landscape tablets, 768px and up) */
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {
-    background: orange;
-  }
-}
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .example {
-    background: pink;
-  }
-}
+
+  @media only screen and (min-width: 601px) and (max-width: 1000px) {   
+    .footer-info-children{
+        width: 45%;
+    }
+}*/
 .div-1 {
   display: flex;
   flex-direction: row;
@@ -98,6 +81,39 @@ nav a {
   margin-top: 5%;
 }
 
+#colaboraciones .visualizador #visualizador-video, #material .visualizador #visualizador-video {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#visualizador-video-material {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: blue;
+  border-width: 5px;
+}
+
+#material {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+#material .visualizador {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
 #colaboraciones {
   margin-top: 5%;
   display: flex;
@@ -112,12 +128,6 @@ nav a {
   justify-content: center;
   padding-top: 2%;
   padding-bottom: 2%;
-}
-#colaboraciones .visualizador #visualizador-video {
-  width: 60%;
-  height: auto;
-  display: flex;
-  justify-content: center;
 }
 #colaboraciones .visualizador #visualizador-colleccion {
   width: 30%;
@@ -146,6 +156,42 @@ nav a {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.video-centrado {
+  display: flex;
+}
+
+#frase {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+footer {
+  background-color: #6A827F;
+}
+
+#footer-info {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+}
+#footer-info .footer-info-children {
+  width: 30%;
+  height: 30%;
+  margin: 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#eventos {
+  text-align: center;
+}
+
+footer > h2 {
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
