@@ -1,43 +1,67 @@
+//Importación de archivo scss
 @import "variables";
 @import "media-querys";
 
-
-
+//Definición de Mixins
 @mixin prueba-caja($color){
     border-style: solid;
     border-color:$color;
     border-width: 5px;
 }
-// @include prueba-caja(blue);
 
 @mixin margen-top-bottom($margen){
     margin-top: $margen;
     margin-bottom: $margen;
 }
 
-.div-1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+@mixin padding-interno($interno){
+    padding-top: $interno;
+    padding-bottom: $interno;
 }
 
+//Declaración de Placeholders
+%visualizador{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+%visualizador-video-general{
+    width: 60%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+}
+
+
+
+//Definición de estilos
 *{
     margin: 0; 
     padding: 0;  
 }
+
    
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;
 }
-h2{
+
+.espacio-subtitulos{
     text-align: center;
+    @include margen-top-bottom(2%);
 }
 
-
-@mixin padding-interno($interno){
-    padding-top: $interno;
-    padding-bottom: $interno;
+.social{
+    position: fixed;
+    left: 0;
+    top: 400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
 }
 
 nav {
@@ -62,11 +86,9 @@ nav {
     }
     a{
         text-decoration: none;
-    }
-
-    
-    
+    }  
 }
+
 .logo-icon{
     width: 40px;
 }
@@ -83,26 +105,23 @@ nav {
     height: 50vh;
 }
 
-.social{
-    position: fixed;
-    left: 0;
-    top: 400px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    margin-left: 2%;
-}
-
-#ultimo-material{
+#material{
     margin-top: $margin-top-div;
-}
-
-%visualizador-video-general{
-    width: 60%;
-    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center; 
-}
+
+    .visualizador-material{
+        @extend %visualizador;
+        @include padding-interno($padding-botton-top);
+    
+        .visualizador-video{
+           @extend %visualizador-video-general;
+        }
+    }
+
+ }
 
 #visualizador-video-material{
     width: 60%;
@@ -110,30 +129,11 @@ nav {
     display: flex;
     justify-content: center; 
     align-items: center;
-    @include prueba-caja(blue);
+    //@include prueba-caja(blue);
  }
 
 
- #material{
-    margin-top: $margin-top-div;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; 
-
-    .visualizador{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        @include padding-interno($padding-botton-top);
-    
-        #visualizador-video{
-           @extend %visualizador-video-general;
-        }
-    }
-
- }
+ 
 #colaboraciones{
     margin-top: $margin-top-div;
     display: flex;
@@ -142,13 +142,10 @@ nav {
     justify-content: center;
 
     .visualizador{
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
+        @extend %visualizador;
         @include padding-interno($padding-botton-top);
     
-        #visualizador-video{
+        .visualizador-video{
            @extend %visualizador-video-general;
         }
         #visualizador-colleccion{
@@ -181,11 +178,6 @@ nav {
     position: absolute;
     top: 0;
     width: 100%;
-}
-
-
-.video-centrado{
-    display: flex;
 }
 
 #frase{
